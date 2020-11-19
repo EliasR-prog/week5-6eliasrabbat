@@ -4,6 +4,7 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.stream.Collectors;
 
+
 @WebServlet(urlPatterns={"/patients"},loadOnStartup = 1)
 public class MyServlet extends HttpServlet {
     @Override
