@@ -3,6 +3,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.stream.Collectors;
+import com.google.gson.Gson;
 
 
 @WebServlet(urlPatterns={"/patients"},loadOnStartup = 1)
@@ -53,7 +54,10 @@ public class MyServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
             IOException {
         String reqBody=req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
-        resp.setContentType("text/html");
+        resp.setContentType("application/json");
         resp.getWriter().write("Thank you client! "+reqBody);
+        System.out.println(reqBody);
+        Gson gson = new Gson();
+        Patient p=gson.fromJson(reqBody,Patient.class);
     }
 }
