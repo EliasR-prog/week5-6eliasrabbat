@@ -1,1 +1,1 @@
-web:java$JAVA_OPTS-jar./webapp-runner-9.0.24.1.jar${WEBAPP_RUNNER_OPTS}--port$PORT./build/libs/week5-6eliasrabbat-1.0-SNAPSHOT.war
+web: java $JAVA_OPTS -jar ./webapp-runner-9.0.24.1.jar ${WEBAPP_RUNNER_OPTS} --port $PORT ./build/libs/week5-6eliasrabbat.war
