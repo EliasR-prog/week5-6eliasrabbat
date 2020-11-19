@@ -13,5 +13,5 @@ cache:
 deploy:
   provider: heroku
   api_key: e25c5d0a-9903-4262-a33e-c69cf10a4f04
-  app: week5-6eliasr
+  app: week5-6eliasrabbat
   skip_cleanup: true
